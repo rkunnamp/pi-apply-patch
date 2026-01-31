@@ -1,0 +1,21 @@
+Apply a high-level apply_patch diff to modify files.
+
+Input must be in the opencode apply_patch format surrounded by markers:
+
+*** Begin Patch
+*** Update File: path/to/file
+@@ optional context line
+  unchanged line
+- removed line
++ added line
+*** End Patch
+
+Supported operations:
+- Add File
+- Update File (with optional *** Move to: new/path)
+- Delete File
+
+Safety:
+- File paths may be absolute or relative. Absolute paths must point inside the current project worktree.
+- All file changes must remain inside the current project worktree.
+- No confirmation prompt; patches are applied immediately.

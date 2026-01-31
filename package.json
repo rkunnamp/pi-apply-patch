@@ -1,0 +1,14 @@
+{
+  "name": "pi-apply-patch",
+  "version": "0.0.1",
+  "description": "A pi extension that provides an apply_patch tool (YOLO: no confirmation prompt).",
+  "keywords": ["pi-package", "pi-extension"],
+  "private": true,
+  "pi": {
+    "extensions": ["./extensions/apply-patch/index.ts"]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "@sinclair/typebox": "*"
+  }
+}

@@ -44,7 +44,7 @@ export default function applyPatchExtension(pi: ExtensionAPI) {
       }),
     }),
 
-    async execute(_toolCallId, params, onUpdate, ctx, signal) {
+    async execute(_toolCallId, params, signal, onUpdate, ctx) {
       const root = path.resolve(ctx.cwd);
 
       onUpdate?.({ content: [{ type: "text", text: "Parsing patch..." }] });

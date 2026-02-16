@@ -16,6 +16,7 @@ Supported operations:
 - Delete File
 
 Safety:
-- File paths may be absolute or relative. Absolute paths must point inside the current project worktree.
-- All file changes must remain inside the current project worktree.
+- File paths may be absolute or relative.
+- Relative paths are resolved against the current project directory.
+- Absolute paths may point anywhere on the filesystem.
 - No confirmation prompt; patches are applied immediately.

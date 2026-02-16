@@ -56,7 +56,7 @@ export default function applyPatchExtension(pi: ExtensionAPI) {
         };
       }
 
-      // Build a list of validated file changes (absolute paths), and a diff preview.
+      // Build a list of resolved file changes (absolute paths), and a diff preview.
       const changes: ApplyPatchFileChange[] = [];
       let diff = "";
 

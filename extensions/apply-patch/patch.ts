@@ -174,12 +174,12 @@ export function parsePatch(patchText: string): ParsedApplyPatch {
 }
 
 export function resolvePathInRoot(rootAbs: string, p: string): { abs: string; rel: string } {
+  // NOTE: This extension intentionally allows patch targets outside the project root.
+  // - Relative paths are still resolved against rootAbs for convenience.
+  // - Absolute paths are used as-is.
   const abs = path.isAbsolute(p) ? path.normalize(p) : path.resolve(rootAbs, p);
-  const rel = path.relative(rootAbs, abs);
-  if (rel === "" || (!rel.startsWith(".." + path.sep) && rel !== ".." && !path.isAbsolute(rel))) {
-    return { abs, rel: rel || "." };
-  }
-  throw new Error(`Path escapes project root: ${p}`);
+  const rel = path.relative(rootAbs, abs) || ".";
+  return { abs, rel };
 }
 
 export function deriveNewContentsFromChunks(fileAbsPath: string, chunks: UpdateFileChunk[]): {

@@ -34,7 +34,8 @@ pi -e git:https://github.com/rkunnamp/pi-apply-patch
   - `*** Update File:` (supports optional `*** Move to:` rename)
   - `*** Delete File:`
 - Safety:
-  - Paths are validated to stay inside the current project root (`ctx.cwd`).
+  - Relative paths are resolved against the current project directory (`ctx.cwd`).
+  - Absolute paths may point anywhere on the filesystem.
   - **No confirmation prompt**.
 
 ## Patch format

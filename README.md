@@ -7,6 +7,7 @@ This variant is **YOLO**: it **does not ask for confirmation** (even in interact
 ## Disclaimers
 
 - **No project boundary enforcement.** It allows editing or moving files outside the project root.
+- **No diff in TUI.** It does not show the diff in the TUI before applying changes.
 - **Vibe Coded Code.** But has been in use for months in mac and linux environments.
 
 ## Install

@@ -2,6 +2,7 @@
   "name": "pi-apply-patch",
   "version": "0.0.1",
   "description": "A pi extension that provides an apply_patch tool (YOLO: no confirmation prompt).",
+  "license": "MIT",
   "keywords": ["pi-package", "pi-extension"],
   "private": true,
   "pi": {

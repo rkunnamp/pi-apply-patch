@@ -4,6 +4,11 @@ A **pi** extension that registers an `apply_patch` tool for applying high-level 
 
 This variant is **YOLO**: it **does not ask for confirmation** (even in interactive/UI mode). Patches are applied immediately.
 
+## Disclaimers
+
+- **No project boundary enforcement.** It allows editing or moving files outside the project root.
+- **Vibe Coded Code.** But has been in use for months in mac and linux environments.
+
 ## Install
 
 ### Install as a pi package (recommended)
